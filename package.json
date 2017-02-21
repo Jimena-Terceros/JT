@@ -32,6 +32,7 @@
     "karma": "^0.13.22",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^0.2.0",
+    "karma-firefox-launcher": "^1.0.0",
     "karma-mocha": "^0.2.0",
     "karma-mocha-reporter": "^1.0.2",
     "karma-sourcemap-loader": "^0.3.4",
@@ -53,7 +54,7 @@
   },
   "scripts": {
     "build": "gulp build",
-    "clean" : "gulp clean",
+    "clean": "gulp clean",
     "component": "gulp component",
     "serve": "gulp serve",
     "start": "gulp serve",

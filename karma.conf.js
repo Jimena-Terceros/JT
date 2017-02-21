@@ -16,6 +16,7 @@ module.exports = function (config) {
     plugins: [
       require("karma-chai"),
       require("karma-chrome-launcher"),
+      require("karma-firefox-launcher"),
       require("karma-mocha"),
       require("karma-mocha-reporter"),
       require("karma-sourcemap-loader"),
@@ -60,7 +61,7 @@ module.exports = function (config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    browsers: ['Firefox'],
 
     // if true, Karma runs tests once and exits
     singleRun: true
