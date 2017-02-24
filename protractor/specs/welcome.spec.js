@@ -8,7 +8,7 @@ describe('Welcome page', () => {
         WelcomePage.goToPage()
             .then(() => WelcomePage.getTitle())
             .then(title => {
-            expect(title).toBe('Hello World App');
+            expect(title).toBe('Hello');
             done();
             });
     });
@@ -17,7 +17,7 @@ describe('Welcome page', () => {
         WelcomePage.goToPage()
             .then(() => WelcomePage.getMessage())
             .then(message => {
-                expect(message).toBe('Welcome Jimena!');
+                expect(message).toBe('Welcome');
                 done();
             });
     });
