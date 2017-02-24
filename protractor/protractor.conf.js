@@ -1,4 +1,11 @@
 var SpecReporter = require('jasmine-spec-reporter');
+var jasmineReporters = require('jasmine-reporters');
+
+var junitXmlReporter = new jasmineReporters.JUnitXmlReporter({
+    savePath: './reports/protractor/',
+    filePrefix: 'junit',
+    consolidateAll: true
+});
 
 exports.config = {
     specs: ['specs/*spec.js'],
@@ -15,6 +22,7 @@ exports.config = {
 
     onPrepare: function () {
         jasmine.getEnv().addReporter(new SpecReporter({displayStacktrace: 'spec'}));
+        jasmine.getEnv().addReporter(junitXmlReporter);
     },
 
     capabilities: {
