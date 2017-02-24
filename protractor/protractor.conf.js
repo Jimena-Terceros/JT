@@ -1,4 +1,3 @@
-var testData = require('./resources/test-data.json');
 var SpecReporter = require('jasmine-spec-reporter');
 
 exports.config = {
