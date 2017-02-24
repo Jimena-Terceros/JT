@@ -69,3 +69,6 @@ The components are created in the following structure:
 ⋅⋅⋅⋅⋅⋅⋅⋅componentName.scss // scoped to affect only its own template
 ⋅⋅⋅⋅⋅⋅⋅⋅componentName.spec.js // contains passing demonstration tests
 ```
+
+### To run Acceptance Tests
+1. Rename test-data.template.json to test-data.json

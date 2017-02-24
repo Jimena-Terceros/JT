@@ -16,6 +16,7 @@ import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 import colorsSupported      from 'supports-color';
 import historyApiFallback   from 'connect-history-api-fallback';
+import { protractor } from 'gulp-protractor';
 
 let root = 'client';
 
@@ -121,6 +122,20 @@ gulp.task('clean', (cb) => {
     gutil.log("[clean]", paths);
     cb();
   })
+});
+
+gulp.task('protractor', () => {
+
+    gulp.src(['./protractor/specs/*.spec.js'])
+        .pipe(protractor({configFile: './protractor/protractor.conf.js'}))
+        .on('error', function (e) {
+            console.log('Error: ', e);
+        })
+        .on('end', function () {
+            console.log('=========================');
+            console.log('Protractor test run done.');
+            console.log('=========================');
+        });
 });
 
 gulp.task('default', ['watch']);

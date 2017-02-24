@@ -51,7 +51,11 @@
     "webpack": "^1.13.3",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.6.0",
-    "yargs": "^3.9.0"
+    "yargs": "^3.9.0",
+    "protractor": "^3.1.1",
+    "gulp-protractor": "~1.0.0",
+    "jasmine-core": "~2.3.4",
+    "jasmine-spec-reporter": "^2.4.0"
   },
   "scripts": {
     "build": "gulp build",
@@ -61,7 +65,8 @@
     "start": "gulp serve",
     "test": "karma start",
     "watch": "gulp serve",
-    "webpack": "gulp webpack"
+    "webpack": "gulp webpack",
+    "protractor": "gulp protractor"
   },
   "keywords": [
     "angular",
